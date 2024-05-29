@@ -57,7 +57,9 @@ fbplot=function(fit,x=NULL,method='MBD',depth=NULL,plot=TRUE,prob=0.5,color=6,ou
 	y=apply(medavg,1,mean)
 	
 	if (plot) {
+	titlen <- paste("factor =", factor)
 	plot(x,y,lty=1,lwd=2,col=1,type='l',xlim,ylim,...)
+	title(main = titlen)
 	}
 	for (pp in 1:length(prob)){
 		m=ceiling(n*prob[pp])#at least 50%
